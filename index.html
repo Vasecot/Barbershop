@@ -100,7 +100,7 @@
           ПН—ПТ: С 10:00 ДО 22:00 <br>
           СБ—ВС: С 10:00 ДО 19:00 <br>
         </p>
-        <a class="button" href="map.html">Как проехать</a>
+        <a class="button js-button-map" href="map.html">Как проехать</a>
         <a class="button" href="contacts.html">Обратная связь</a>
       </section>
 
@@ -187,11 +187,11 @@
     <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
       <p>
         <label class="visually-hidden" for="login-name">Логин</label>
-        <input class="login-icon-user" type="text" name="login-name" id="login-name" placeholder="Логин">
+        <input class="login-icon-user" type="text" name="login" id="login-name" placeholder="Логин">
       </p>
       <p>
         <label class="visually-hidden" for="login-password">Пароль</label>
-        <input class="login-icon-password" type="password" name="login-password" id="login-password"
+        <input class="login-icon-password" type="password" name="login" id="login-password"
           placeholder="Пароль">
       </p>
       <p class="login-help">
@@ -208,29 +208,17 @@
 
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.618201098073!2d30.322521685179463!3d59.938477322304045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1564053528583!5m2!1sru!2sru" width="766" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
     <p>
-      <img src="img/map.jpg" width="780" height="574"
+      <img src="img/map.jpg" width="766" height="560"
         alt="Офис компании по адресу ул Большая Конюшенная, д. 19/8, Санкт-Петербург">
     </p>
     <button class="modal-close" type="button">Закрыть</button>
   </section>
   <!-- <div class="modal-overlay"></div> -->
 
-  <script>
-    var link = document.querySelector(".login-link");
-    var popup = document.querySelector(".modal-login");
-    var close = document.querySelector(".modal-close");
-
-    link.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.add("modal-show");
-    });
-
-    close.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.remove("modal-show");
-    });
-  </script>
+  <script src="js/popup.js"></script>
+  <script src="js/map.js"></script>
 </body>
 
 </html>
